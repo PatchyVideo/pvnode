@@ -15,7 +15,8 @@ export default function (app: FastifyInstance, opts: FastifyPluginOptions, done:
         error: 'Image is not a buffer',
       })
 
-    const filename = 'sqip-' + Math.random().toString(36).substring(2, 15) + '.jpg'
+    const ext = req.headers['content-type']?.split('/')[1] === 'jpeg' ? 'jpg' : 'png'
+    const filename = `sqip-${Math.random().toString(36).substring(2, 15)}.${ext}`
     const file = join('/tmp', filename)
 
     await writeFile(file, image)

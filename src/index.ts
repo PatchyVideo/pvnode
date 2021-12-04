@@ -10,6 +10,9 @@ app.register(fastifyCompress)
 app.addContentTypeParser('image/jpeg', { parseAs: 'buffer' }, function (req, body, done) {
   done(null, body)
 })
+app.addContentTypeParser('image/png', { parseAs: 'buffer' }, function (req, body, done) {
+  done(null, body)
+})
 
 import serviceSQIP from './services/sqip'
 app.register(serviceSQIP, { prefix: '/sqip' })
