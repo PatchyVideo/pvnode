@@ -34,6 +34,7 @@ export default function (app: FastifyInstance, opts: FastifyPluginOptions, done:
         JSON.stringify({
           status: 'success',
           content: sq.content.toString('utf-8'),
+          dataURI: sq.metadata.dataURI,
         })
       )
   })
