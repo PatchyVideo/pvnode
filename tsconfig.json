@@ -1,0 +1,18 @@
+{
+  "include": ["src"],
+  "compilerOptions": {
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "lib": ["ESNext", "ESNext.AsyncIterable"],
+    "types": ["node"],
+    "jsx": "preserve",
+    "target": "ESNext",
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "noUnusedLocals": true,
+    "strict": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "baseUrl": "."
+  }
+}
